@@ -644,14 +644,15 @@ class APIHandler(BaseHTTPRequestHandler):
         ]
 
         # Create a list of available models
-        models = [
-            {
-                "id": repo.repo_id,
-                "object": "model",
-                "created": self.created,
-            }
-            for repo in downloaded_models
-        ]
+        # models = [
+        #     {
+        #         "id": repo.repo_id,
+        #         "object": "model",
+        #         "created": self.created,
+        #     }
+        #     for repo in downloaded_models
+        # ]
+        models = [{"id": "gpt-40-mini", "object": "model", "created": 1727879953}]
 
         response = {"object": "list", "data": models}
 
