@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Dict, List, Literal, NamedTuple, Optional, Sequence, Union
 
 import mlx.core as mx
-from huggingface_hub import scan_cache_dir
+# from huggingface_hub import scan_cache_dir
 
 from .utils import generate_step, load
 
@@ -638,10 +638,10 @@ class APIHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
         # Scan the cache directory for downloaded mlx models
-        hf_cache_info = scan_cache_dir()
-        downloaded_models = [
-            repo for repo in hf_cache_info.repos if "mlx" in repo.repo_id
-        ]
+        # hf_cache_info = scan_cache_dir()
+        # downloaded_models = [
+        #     repo for repo in hf_cache_info.repos if "mlx" in repo.repo_id
+        # ]
 
         # Create a list of available models
         # models = [
