@@ -652,7 +652,7 @@ class APIHandler(BaseHTTPRequestHandler):
         #     }
         #     for repo in downloaded_models
         # ]
-        models = [{"id": "gpt-40-mini", "object": "model", "created": 1727879953}]
+        models = [{"id": "gpt-4o-mini", "object": "model", "created": 1727879953}]
 
         response = {"object": "list", "data": models}
 
